@@ -4,9 +4,9 @@ sources:
   - name: raw_titanic
     description: "Source data for the Titanic dataset"
     database: abiding-orb-463315-p3
-    schema: raw_titanic
+    schema: titanic_survival_training
     tables:
-      - name: training_data
+      - name: titanic_survival_training
         description: "Titanic oassenger details and survival outcome"
         # columns:
         #   - name: passenger_id
