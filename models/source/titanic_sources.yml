@@ -1,0 +1,16 @@
+version: 2
+
+sources: 
+  - name: raw_titanic
+    description: "Source data for the Titanic dataset"
+    database: abiding-orb-463315-p3
+    schema: raw_titanic
+    tables:
+      - name: training_data
+        description: "Titanic oassenger details and survival outcome"
+        # columns:
+        #   - name: passenger_id
+        #     description: "Unique identifier for each passenger"
+        #   - name: survived
+        #     description: "Indicates if the passenger survived (1) or not (0)"
+        #   - name: pclass
