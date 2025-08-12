@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: mart_survival_features
+    description: "Feature mart for Titanic survival analysis"
+    columns:
+      - name: passenger_id
+        description: "Unique identifier for each passenger"
+        tests:
+          - not_null
+          - unique
+      - name: survived
+        description: "Indicates if the passenger survived (1) or not (0)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+      - name: pclass
+        description: "Passenger class (1st, 2nd, or 3rd)"
+        tests:
+          - not_null
+      - name: name
+        description: "Name of the passenger"
+        tests:
+          - not_null        
+      - name: sex
+        description: "Sex of the passenger"
+        tests:
+          - not_null        
+      - name: age
+        description: "Age of the passenger (missing values filled with median)"
+        tests:
+          - not_null        
+      - name: sibsp
+        description: "Number of siblings/spouses aboard"
+        tests:
+          - not_null        
+      - name: parch
+        description: "Number of parents/children aboard"
+        tests:
+          - not_null        
+      - name: ticket
+        description: "Ticket number"
+        tests:
+          - not_null        
+      - name: fare
+        description: "Fare paid by the passenger"
+        tests:
+          - not_null        
+      - name: embarked
+        description: "Port of embarkation (missing values filled with mode)"        
+        tests:
+          - not_null        
